@@ -6,9 +6,18 @@ class PomodoroScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: Center(
-        child: Text('Pomodoro Screen'),
+      child: ElevatedButton(
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const TaskScreen(),
+            ),
+          );
+        },
+        child: const Text('Go to Task Screen'),
       ),
-    );
-  }
+    ),
+  );
 }
-
+}
